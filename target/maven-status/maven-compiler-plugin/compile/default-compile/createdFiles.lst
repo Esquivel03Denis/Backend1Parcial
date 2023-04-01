@@ -1,0 +1,7 @@
+py\com\progweb\prueba\model\Persona.class
+py\com\progweb\prueba\model\Clientes.class
+py\com\progweb\prueba\ejb\PersonaDAO.class
+py\com\progweb\prueba\rest\ClienteRest.class
+py\com\progweb\prueba\ejb\ClientesDao.class
+py\com\progweb\prueba\rest\ApplicationConfig.class
+py\com\progweb\prueba\rest\PersonaRest.class
