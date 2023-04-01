@@ -1,7 +1,16 @@
-c:\Users\denis\Desktop\prueba\prueba\src\main\java\py\com\progweb\prueba\ejb\PersonaDAO.java
-c:\Users\denis\Desktop\prueba\prueba\src\main\java\py\com\progweb\prueba\rest\PersonaRest.java
-c:\Users\denis\Desktop\prueba\prueba\src\main\java\py\com\progweb\prueba\model\Clientes.java
-c:\Users\denis\Desktop\prueba\prueba\src\main\java\py\com\progweb\prueba\rest\ClienteRest.java
-c:\Users\denis\Desktop\prueba\prueba\src\main\java\py\com\progweb\prueba\ejb\ClientesDao.java
-c:\Users\denis\Desktop\prueba\prueba\src\main\java\py\com\progweb\prueba\rest\ApplicationConfig.java
-c:\Users\denis\Desktop\prueba\prueba\src\main\java\py\com\progweb\prueba\model\Persona.java
+c:\Users\Diego\Documents\1er Semestre 2023\Back End\Backend1Parcial\src\main\java\py\com\progweb\prueba\rest\Consultas.java
+c:\Users\Diego\Documents\1er Semestre 2023\Back End\Backend1Parcial\src\main\java\py\com\progweb\prueba\model\UsoPuntosDetalles.java
+c:\Users\Diego\Documents\1er Semestre 2023\Back End\Backend1Parcial\src\main\java\py\com\progweb\prueba\model\BolsaPuntos.java
+c:\Users\Diego\Documents\1er Semestre 2023\Back End\Backend1Parcial\src\main\java\py\com\progweb\prueba\rest\BolsaPuntosRest.java
+c:\Users\Diego\Documents\1er Semestre 2023\Back End\Backend1Parcial\src\main\java\py\com\progweb\prueba\rest\ClienteRest.java
+c:\Users\Diego\Documents\1er Semestre 2023\Back End\Backend1Parcial\src\main\java\py\com\progweb\prueba\ejb\BolsaPuntosDAO.java
+c:\Users\Diego\Documents\1er Semestre 2023\Back End\Backend1Parcial\src\main\java\py\com\progweb\prueba\model\AsignacionPuntos.java
+c:\Users\Diego\Documents\1er Semestre 2023\Back End\Backend1Parcial\src\main\java\py\com\progweb\prueba\ejb\ClientesDao.java
+c:\Users\Diego\Documents\1er Semestre 2023\Back End\Backend1Parcial\src\main\java\py\com\progweb\prueba\rest\PersonaRest.java
+c:\Users\Diego\Documents\1er Semestre 2023\Back End\Backend1Parcial\src\main\java\py\com\progweb\prueba\model\UsoPuntosCabecera.java
+c:\Users\Diego\Documents\1er Semestre 2023\Back End\Backend1Parcial\src\main\java\py\com\progweb\prueba\rest\ApplicationConfig.java
+c:\Users\Diego\Documents\1er Semestre 2023\Back End\Backend1Parcial\src\main\java\py\com\progweb\prueba\model\Clientes.java
+c:\Users\Diego\Documents\1er Semestre 2023\Back End\Backend1Parcial\src\main\java\py\com\progweb\prueba\model\ConceptoUsoPuntos.java
+c:\Users\Diego\Documents\1er Semestre 2023\Back End\Backend1Parcial\src\main\java\py\com\progweb\prueba\model\VencimientoPuntos.java
+c:\Users\Diego\Documents\1er Semestre 2023\Back End\Backend1Parcial\src\main\java\py\com\progweb\prueba\ejb\PersonaDAO.java
+c:\Users\Diego\Documents\1er Semestre 2023\Back End\Backend1Parcial\src\main\java\py\com\progweb\prueba\model\Persona.java
