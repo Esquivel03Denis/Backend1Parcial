@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 c:\Users\Diego\Documents\1er Semestre 2023\Back End\Backend1Parcial\src\main\java\py\com\progweb\prueba\rest\Consultas.java
 c:\Users\Diego\Documents\1er Semestre 2023\Back End\Backend1Parcial\src\main\java\py\com\progweb\prueba\model\UsoPuntosDetalles.java
 c:\Users\Diego\Documents\1er Semestre 2023\Back End\Backend1Parcial\src\main\java\py\com\progweb\prueba\model\BolsaPuntos.java
@@ -14,3 +15,25 @@ c:\Users\Diego\Documents\1er Semestre 2023\Back End\Backend1Parcial\src\main\jav
 c:\Users\Diego\Documents\1er Semestre 2023\Back End\Backend1Parcial\src\main\java\py\com\progweb\prueba\model\VencimientoPuntos.java
 c:\Users\Diego\Documents\1er Semestre 2023\Back End\Backend1Parcial\src\main\java\py\com\progweb\prueba\ejb\PersonaDAO.java
 c:\Users\Diego\Documents\1er Semestre 2023\Back End\Backend1Parcial\src\main\java\py\com\progweb\prueba\model\Persona.java
+=======
+c:\Users\Usuario\Desktop\proyecto backend\Backend1Parcial\src\main\java\py\com\progweb\prueba\rest\PersonaRest.java
+c:\Users\Usuario\Desktop\proyecto backend\Backend1Parcial\src\main\java\py\com\progweb\prueba\model\ConceptoUsoPuntos.java
+c:\Users\Usuario\Desktop\proyecto backend\Backend1Parcial\src\main\java\py\com\progweb\prueba\model\Persona.java
+c:\Users\Usuario\Desktop\proyecto backend\Backend1Parcial\src\main\java\py\com\progweb\prueba\rest\ApplicationConfig.java
+c:\Users\Usuario\Desktop\proyecto backend\Backend1Parcial\src\main\java\py\com\progweb\prueba\rest\VencimientoPuntosRest.java
+c:\Users\Usuario\Desktop\proyecto backend\Backend1Parcial\src\main\java\py\com\progweb\prueba\ejb\ConceptoUsoPuntosDAO.java
+c:\Users\Usuario\Desktop\proyecto backend\Backend1Parcial\src\main\java\py\com\progweb\prueba\model\AsignacionPuntos.java
+c:\Users\Usuario\Desktop\proyecto backend\Backend1Parcial\src\main\java\py\com\progweb\prueba\ejb\ClientesDao.java
+c:\Users\Usuario\Desktop\proyecto backend\Backend1Parcial\src\main\java\py\com\progweb\prueba\rest\ClienteRest.java
+c:\Users\Usuario\Desktop\proyecto backend\Backend1Parcial\src\main\java\py\com\progweb\prueba\rest\AsignacionPuntosRest.java
+c:\Users\Usuario\Desktop\proyecto backend\Backend1Parcial\src\main\java\py\com\progweb\prueba\model\UsoPuntosCabecera.java
+c:\Users\Usuario\Desktop\proyecto backend\Backend1Parcial\src\main\java\py\com\progweb\prueba\model\VencimientoPuntos.java
+c:\Users\Usuario\Desktop\proyecto backend\Backend1Parcial\src\main\java\py\com\progweb\prueba\ejb\AsignacionPuntosDAO.java
+c:\Users\Usuario\Desktop\proyecto backend\Backend1Parcial\src\main\java\py\com\progweb\prueba\rest\ConceptoUsoPuntosRest.java
+c:\Users\Usuario\Desktop\proyecto backend\Backend1Parcial\src\main\java\py\com\progweb\prueba\model\UsoPuntosDetalles.java
+c:\Users\Usuario\Desktop\proyecto backend\Backend1Parcial\src\main\java\py\com\progweb\prueba\model\Clientes.java
+c:\Users\Usuario\Desktop\proyecto backend\Backend1Parcial\src\main\java\py\com\progweb\prueba\ejb\PersonaDAO.java
+c:\Users\Usuario\Desktop\proyecto backend\Backend1Parcial\src\main\java\py\com\progweb\prueba\model\BolsaPuntos.java
+c:\Users\Usuario\Desktop\proyecto backend\Backend1Parcial\src\main\java\py\com\progweb\prueba\ejb\VencimientoPuntosDAO.java
+c:\Users\Usuario\Desktop\proyecto backend\Backend1Parcial\src\main\java\py\com\progweb\prueba\rest\Consultas.java
+>>>>>>> Stashed changes

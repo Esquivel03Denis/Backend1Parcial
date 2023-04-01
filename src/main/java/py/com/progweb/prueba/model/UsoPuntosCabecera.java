@@ -65,4 +65,5 @@ public class UsoPuntosCabecera {
     public void setConceptoUso(ConceptoUsoPuntos conceptoUso) {
         this.conceptoUso = conceptoUso;
     }
+    
 }
