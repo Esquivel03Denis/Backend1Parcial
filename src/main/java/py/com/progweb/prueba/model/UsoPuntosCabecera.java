@@ -26,7 +26,7 @@ public class UsoPuntosCabecera {
     @Column(name = "PUNTAJE_UTILIZADO")
     private Integer puntajeAsignado;
     @Column(name = "FECHA")
-    private String puntajeUtilizado;
+    private String fecha;
     @JoinColumn(name = "ID_CLIENTE", referencedColumnName = "ID")
     @ManyToOne
     private Clientes cliente;
@@ -47,11 +47,11 @@ public class UsoPuntosCabecera {
     public void setPuntajeAsignado(Integer puntajeAsignado) {
         this.puntajeAsignado = puntajeAsignado;
     }
-    public String getPuntajeUtilizado() {
-        return puntajeUtilizado;
+    public String getFecha() {
+        return fecha;
     }
-    public void setPuntajeUtilizado(String puntajeUtilizado) {
-        this.puntajeUtilizado = puntajeUtilizado;
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
     public Clientes getCliente() {
         return cliente;
