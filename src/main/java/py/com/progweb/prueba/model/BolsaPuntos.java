@@ -26,6 +26,8 @@ public class BolsaPuntos {
     private Integer saldoPuntos;
     @Column(name = "MONTO_OPERACION")
     private Integer montoOperacion;
+    @Column(name = "FECHA_ASIGNACION")
+    private String fecAsig;
     @JoinColumn(name = "ID_CLIENTE", referencedColumnName = "ID")
     @ManyToOne
     private Clientes cliente;
@@ -76,5 +78,11 @@ public class BolsaPuntos {
     }
     public void setVencimientoPuntos(VencimientoPuntos vencimientoPuntos) {
         this.vencimientoPuntos = vencimientoPuntos;
+    }
+    public String getFecAsig() {
+        return fecAsig;
+    }
+    public void setFecAsig(String fecAsig) {
+        this.fecAsig = fecAsig;
     }
 }
