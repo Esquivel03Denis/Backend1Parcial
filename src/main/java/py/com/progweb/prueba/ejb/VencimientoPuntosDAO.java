@@ -20,7 +20,7 @@ public class VencimientoPuntosDAO {
 
     public void borrar (Integer id){
         try{
-            Query q = em.createQuery("select b from vencimiento_puntos b where b.id = :id", VencimientoPuntos.class)
+            Query q = em.createQuery("select b from VencimientoPuntos b where b.id = :id", VencimientoPuntos.class)
             .setParameter("id", id);
             VencimientoPuntos vencimientoPunto = (VencimientoPuntos)q.getSingleResult();
             em.remove(vencimientoPunto);
@@ -35,7 +35,7 @@ public class VencimientoPuntosDAO {
 
     public List<VencimientoPuntos> lista (){
         try {
-            Query q = em.createQuery("select b from vencimiento_puntos b", VencimientoPuntos.class);
+            Query q = em.createQuery("select b from VencimientoPuntos b", VencimientoPuntos.class);
             return (List<VencimientoPuntos>)q.getResultList();   
         } catch (Exception e) {
             return null;
@@ -44,7 +44,7 @@ public class VencimientoPuntosDAO {
 
     public VencimientoPuntos getvencimientoPunto (Integer id){
         try{
-            Query q = em.createQuery("select b from vencimiento_puntos b where b.id = :id", VencimientoPuntos.class)
+            Query q = em.createQuery("select b from VencimientoPuntos b where b.id = :id", VencimientoPuntos.class)
             .setParameter("id", id);
             return (VencimientoPuntos)q.getSingleResult();
         }catch(Exception e){

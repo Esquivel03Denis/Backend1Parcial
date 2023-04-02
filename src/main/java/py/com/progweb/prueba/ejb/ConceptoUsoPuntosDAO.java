@@ -20,7 +20,7 @@ public class ConceptoUsoPuntosDAO {
 
     public void borrar (Integer id){
         try{
-            Query q = em.createQuery("select b from conceptos_uso_puntos b where b.id = :id", ConceptoUsoPuntos.class)
+            Query q = em.createQuery("select b from ConceptoUsoPuntos b where b.id = :id", ConceptoUsoPuntos.class)
             .setParameter("id", id);
             ConceptoUsoPuntos conceptoUsoPunto = (ConceptoUsoPuntos)q.getSingleResult();
             em.remove(conceptoUsoPunto);
@@ -35,7 +35,7 @@ public class ConceptoUsoPuntosDAO {
 
     public List<ConceptoUsoPuntos> lista (){
         try {
-            Query q = em.createQuery("select b from conceptos_uso_puntos b", ConceptoUsoPuntos.class);
+            Query q = em.createQuery("select b from ConceptoUsoPuntos b", ConceptoUsoPuntos.class);
             return (List<ConceptoUsoPuntos>)q.getResultList();   
         } catch (Exception e) {
             return null;
@@ -44,7 +44,7 @@ public class ConceptoUsoPuntosDAO {
 
     public ConceptoUsoPuntos getconceptoUsoPunto (Integer id){
         try{
-            Query q = em.createQuery("select b from conceptos_uso_puntos b where b.id = :id", ConceptoUsoPuntos.class)
+            Query q = em.createQuery("select b from ConceptoUsoPuntos b where b.id = :id", ConceptoUsoPuntos.class)
             .setParameter("id", id);
             return (ConceptoUsoPuntos)q.getSingleResult();
         }catch(Exception e){

@@ -20,7 +20,7 @@ public class AsignacionPuntosDAO {
 
     public void borrar (Integer id){
         try{
-            Query q = em.createQuery("select b from asignacion_puntos b where b.id = :id", AsignacionPuntos.class)
+            Query q = em.createQuery("select b from AsignacionPuntos b where b.id = :id", AsignacionPuntos.class)
             .setParameter("id", id);
             AsignacionPuntos asignacionPunto = (AsignacionPuntos)q.getSingleResult();
             em.remove(asignacionPunto);
@@ -35,7 +35,7 @@ public class AsignacionPuntosDAO {
 
     public List<AsignacionPuntos> lista (){
         try {
-            Query q = em.createQuery("select b from asignacion_puntos b", AsignacionPuntos.class);
+            Query q = em.createQuery("select b from AsignacionPuntos b", AsignacionPuntos.class);
             return (List<AsignacionPuntos>)q.getResultList();   
         } catch (Exception e) {
             return null;
@@ -44,7 +44,7 @@ public class AsignacionPuntosDAO {
 
     public AsignacionPuntos getAsignacionPuntos (Integer id){
         try{
-            Query q = em.createQuery("select b from asignacion_puntos b where b.id = :id", AsignacionPuntos.class)
+            Query q = em.createQuery("select b from AsignacionPuntos b where b.id = :id", AsignacionPuntos.class)
             .setParameter("id", id);
             return (AsignacionPuntos)q.getSingleResult();
         }catch(Exception e){
