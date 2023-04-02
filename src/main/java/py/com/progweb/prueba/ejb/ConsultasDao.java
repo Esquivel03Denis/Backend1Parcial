@@ -67,7 +67,7 @@ public class ConsultasDao {
         return listaClientes;
     }
 
-    public List<Clientes> ObtenerClientes (String nombre, String  apellido, String cumple){
+    public List<Clientes> obtenerClientes (String nombre, String  apellido, String cumple){
         List <Clientes> listaClientes = null;
         try {
             Query q = em.createQuery("select b from Clientes b where upper(b.nombre) like %upper(:nombre)% and "+

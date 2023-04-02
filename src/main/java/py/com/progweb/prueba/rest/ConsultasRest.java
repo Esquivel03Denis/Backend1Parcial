@@ -55,17 +55,33 @@ public class ConsultasRest {
     @Path("/puntosaVencer")
     @Produces("application/json")
     @GET
-    public Clientes getClientesPtsaVencer (@QueryParam("dias") Integer dias){
+    public Response getClientesPtsaVencer (@QueryParam("dias") Integer dias){
         
-        return null;
+        List <Clientes> listaclClientes = new ArrayList<Clientes>();
+        listaclClientes = consultaDao.obtenerClientes(dias);
+
+        if(listaclClientes != null){
+            return Response.ok(listaclClientes).build();
+        }else{
+            return Response.status(500).entity("Error realizando la consulta de uso de puntos").build();
+        }
+
     }
 
     @Path("/clientes")
     @Produces("application/json")
     @GET
-    public BolsaPuntos getClientes (@QueryParam("nombre") String nombre, @QueryParam("apellido") String apellido,
+    public Response getClientes (@QueryParam("nombre") String nombre, @QueryParam("apellido") String apellido,
                                                @QueryParam("cumple") String cumple){
         
-        return null;
+        List <Clientes> listaclClientes = new ArrayList<Clientes>();
+        listaclClientes = consultaDao.obtenerClientes(nombre,apellido,cumple);
+
+        if(listaclClientes != null){
+            return Response.ok(listaclClientes).build();
+        }else{
+            return Response.status(500).entity("Error realizando la consulta de uso de puntos").build();
+        }
+        
     }
 }
