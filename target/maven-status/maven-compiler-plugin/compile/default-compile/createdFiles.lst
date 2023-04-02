@@ -1,30 +1,7 @@
 py\com\progweb\prueba\model\Persona.class
-<<<<<<< Updated upstream
-=======
-py\com\progweb\prueba\rest\VencimientoPuntosRest.class
-py\com\progweb\prueba\model\Clientes.class
-py\com\progweb\prueba\model\UsoPuntosCabecera.class
-py\com\progweb\prueba\ejb\ConceptoUsoPuntosDAO.class
-py\com\progweb\prueba\ejb\AsignacionPuntosDAO.class
-py\com\progweb\prueba\rest\Consultas.class
-py\com\progweb\prueba\model\AsignacionPuntos.class
-py\com\progweb\prueba\model\UsoPuntosDetalles.class
-py\com\progweb\prueba\ejb\VencimientoPuntosDAO.class
->>>>>>> Stashed changes
 py\com\progweb\prueba\rest\ApplicationConfig.class
 py\com\progweb\prueba\rest\ClienteRest.class
 py\com\progweb\prueba\model\Clientes.class
 py\com\progweb\prueba\rest\PersonaRest.class
-<<<<<<< Updated upstream
 py\com\progweb\prueba\ejb\PersonaDAO.class
 py\com\progweb\prueba\ejb\ClientesDao.class
-=======
-py\com\progweb\prueba\model\BolsaPuntos.class
-py\com\progweb\prueba\model\VencimientoPuntos.class
-py\com\progweb\prueba\ejb\PersonaDAO.class
-py\com\progweb\prueba\model\ConceptoUsoPuntos.class
-py\com\progweb\prueba\rest\ClienteRest.class
-py\com\progweb\prueba\ejb\ClientesDao.class
-py\com\progweb\prueba\rest\ConceptoUsoPuntosRest.class
-py\com\progweb\prueba\rest\AsignacionPuntosRest.class
->>>>>>> Stashed changes
