@@ -31,7 +31,7 @@ public class BolsaPuntos {
     private Clientes cliente;
     @JoinColumn(name = "ID_VENCIMIENTO_PUNTOS", referencedColumnName = "ID")
     @ManyToOne
-    private Clientes vencimientoPuntos;
+    private VencimientoPuntos vencimientoPuntos;
 
     public BolsaPuntos() {
     }
@@ -71,10 +71,10 @@ public class BolsaPuntos {
     public void setCliente(Clientes cliente) {
         this.cliente = cliente;
     }
-    public Clientes getVencimientoPuntos() {
+    public VencimientoPuntos getVencimientoPuntos() {
         return vencimientoPuntos;
     }
-    public void setVencimientoPuntos(Clientes vencimientoPuntos) {
+    public void setVencimientoPuntos(VencimientoPuntos vencimientoPuntos) {
         this.vencimientoPuntos = vencimientoPuntos;
     }
 }

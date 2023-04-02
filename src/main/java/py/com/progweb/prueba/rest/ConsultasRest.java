@@ -20,8 +20,10 @@ import py.com.progweb.prueba.model.UsoPuntosCabecera;
 @Consumes("application/json")
 @Produces("application/json")
 public class ConsultasRest {
+
     @Inject
     private ConsultasDao consultaDao;
+    
     @Path("/usoPuntos")
     @Produces("application/json")
     @GET
@@ -39,10 +41,15 @@ public class ConsultasRest {
     @Path("/bolsaPuntos")
     @Produces("application/json")
     @GET
-    public BolsaPuntos getBolsaPuntos (@QueryParam("idcliente") Integer idCliente, @QueryParam("rangoInicial") Integer rangoInicial,
+    public Response getBolsaPuntos (@QueryParam("idcliente") Integer idCliente, @QueryParam("rangoInicial") Integer rangoInicial,
                                                @QueryParam("rangoFinal") Integer rangoFinal){
-        
-        return null;
+        List <BolsaPuntos> listaBolsas = new ArrayList<BolsaPuntos>();
+        listaBolsas = consultaDao.obtenerBolsas(idCliente, rangoInicial, rangoFinal);
+        if(listaBolsas != null){
+            return Response.ok(listaBolsas).build();
+        }else{
+            return Response.status(500).entity("Error realizando la consulta de uso de puntos").build();
+        }
     }
 
     @Path("/puntosaVencer")
