@@ -85,4 +85,18 @@ public class ServiciosDao {
         }
         return uso;
     }
+
+    public Integer cuantosPuntosEq(Integer montoCambio, Integer idAsigPuntos) {
+        try {
+            AsignacionPuntos ap = em.createQuery("select b from AsignacionPuntos b where b.id = :idAsigPuntos ", AsignacionPuntos.class)
+                    .setParameter("idAsigPuntos", idAsigPuntos)
+                    .getSingleResult();
+            int puntos_corresp= montoCambio/(ap.getEquivaleUnPunto());
+            return puntos_corresp;
+            
+        } catch (Exception e) {
+            System.out.println("Error al cargar Asignacion de puntos"+e);
+        }
+        return -1;
+    }
 }

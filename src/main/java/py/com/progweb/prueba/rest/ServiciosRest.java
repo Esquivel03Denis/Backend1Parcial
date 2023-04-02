@@ -37,5 +37,16 @@ public class ServiciosRest {
         }
     }
 
+    @Path("/cuantosPuntos")
+    @GET
+    public Response cuantosPuntosEq (@QueryParam("montoCambio") Integer montoCambio,
+                                @QueryParam("idAsigPuntos") Integer idAsigPuntos){
+        int puntosEq = serviciosDao.cuantosPuntosEq(montoCambio, idAsigPuntos);
+        if(puntosEq!=-1){
+            return Response.ok(puntosEq).build();
+        }else{
+            return Response.status(500).entity("Error realizando la equivalencia a puntos").build();
+        }
+    }
     
 }
