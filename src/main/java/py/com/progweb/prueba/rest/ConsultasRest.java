@@ -23,7 +23,7 @@ public class ConsultasRest {
 
     @Inject
     private ConsultasDao consultaDao;
-    
+
     @Path("/usoPuntos")
     @Produces("application/json")
     @GET
@@ -63,9 +63,8 @@ public class ConsultasRest {
         if(listaclClientes != null){
             return Response.ok(listaclClientes).build();
         }else{
-            return Response.status(500).entity("Error realizando la consulta de uso de puntos").build();
+            return Response.status(500).entity("Error realizando la consulta de clientes con puntos a vencer").build();
         }
-
     }
 
     @Path("/clientes")
@@ -82,6 +81,5 @@ public class ConsultasRest {
         }else{
             return Response.status(500).entity("Error realizando la consulta de uso de puntos").build();
         }
-        
     }
 }

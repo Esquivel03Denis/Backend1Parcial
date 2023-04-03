@@ -28,6 +28,8 @@ public class BolsaPuntos {
     private Integer montoOperacion;
     @Column(name = "FECHA_ASIGNACION")
     private String fecAsig;
+    @Column(name = "FECHA_CADUCIDAD")
+    private String fecCaducidad;
     @JoinColumn(name = "ID_CLIENTE", referencedColumnName = "ID")
     @ManyToOne
     private Clientes cliente;
@@ -84,5 +86,11 @@ public class BolsaPuntos {
     }
     public void setFecAsig(String fecAsig) {
         this.fecAsig = fecAsig;
+    }
+    public String getFecCaducidad() {
+        return fecCaducidad;
+    }
+    public void setFecCaducidad(String fecCaducidad) {
+        this.fecCaducidad = fecCaducidad;
     }
 }

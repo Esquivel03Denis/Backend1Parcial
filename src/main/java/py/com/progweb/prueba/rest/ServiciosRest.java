@@ -37,6 +37,19 @@ public class ServiciosRest {
         }
     }
 
+    @Path("/usoPuntos")
+    @POST
+    public Response usoPuntos (@QueryParam("idCliente") Integer idCliente, @QueryParam("idConcepto") Integer idConcepto){
+        int uso = serviciosDao.usoPuntos(idCliente, idConcepto);
+        if (uso == 1){
+            return Response.status(500).entity("No se cuentan con la cantidad necesaria de puntos").build();
+        }else if (uso == 2){
+            return Response.ok("Se utilizaron correctamente los puntos").build();
+        }else{
+            return Response.status(500).entity("Error al intentar utilizar los puntos").build();
+        }
+    }
+
     @Path("/cuantosPuntos")
     @GET
     public Response cuantosPuntosEq (@QueryParam("montoCambio") Integer montoCambio,
@@ -48,5 +61,5 @@ public class ServiciosRest {
             return Response.status(500).entity("Error realizando la equivalencia a puntos").build();
         }
     }
-    
+
 }

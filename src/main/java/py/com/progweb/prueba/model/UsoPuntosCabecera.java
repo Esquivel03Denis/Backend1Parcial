@@ -2,8 +2,10 @@ package py.com.progweb.prueba.model;
 import java.util.List;
 
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -33,8 +35,9 @@ public class UsoPuntosCabecera {
     @JoinColumn(name = "ID_CONCEPTOS_USO_PUNTOS", referencedColumnName = "ID")
     @ManyToOne
     private ConceptoUsoPuntos conceptoUso;
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "usoPuntosCabecera")
     private List <UsoPuntosDetalles> detalles;
+    
     public Integer getId() {
         return id;
     }
@@ -64,5 +67,11 @@ public class UsoPuntosCabecera {
     }
     public void setConceptoUso(ConceptoUsoPuntos conceptoUso) {
         this.conceptoUso = conceptoUso;
+    }
+    public List<UsoPuntosDetalles> getDetalles() {
+        return detalles;
+    }
+    public void setDetalles(List<UsoPuntosDetalles> detalles) {
+        this.detalles = detalles;
     }
 }

@@ -52,14 +52,14 @@ public class ConsultasDao {
     public List<Clientes> obtenerClientes (Integer dias){
         List <Clientes> listaClientes = null;
         try {
-            Query q = em.createQuery("select distinc(b.cliente)"+
-                                    "from BolsaPuntos b"+
-                                    "WHERE"+
-                                    "b.saldoPuntos > 0"+
-                                    "and (to_date('b.vencimientoPuntos.fecInicio', 'dd/mm/yyyy') + CAST('b.vencimientoPuntos.diasDuracion days' AS INTERVAL)) < to_date(b.vencimientoPuntos.fecFin, 'dd/mm/yyyy')"+
-                                    "and to_date(b.vencimientoPuntos.fecFin, 'dd/mm/yyyy') - sysdate <= :dias", BolsaPuntos.class)
-                                 .setParameter("dias", dias);
-                                 listaClientes = (List <Clientes>) q.getResultList();                
+            listaClientes = em.createNativeQuery("SELECT c.* "+
+            " FROM bolsa_puntos bp "+
+            " JOIN clientes c ON c.id = bp.id_cliente "+
+            " join vencimiento_puntos vp ON vp.id = bp.id_vencimiento_puntos "+
+            " where bp.saldo_puntos > 0 "+
+            " and to_date(bp.fecha_caducidad, 'dd/mm/yyyy') <= CURRENT_DATE + :dias ", Clientes.class)
+            .setParameter("dias", dias)
+            .getResultList();
         } catch (Exception e) {
             System.out.println("Error al realizar consulta de clientes con puntos a vencer en x dias" + e);
             listaClientes = null;
@@ -70,15 +70,18 @@ public class ConsultasDao {
     public List<Clientes> obtenerClientes (String nombre, String  apellido, String cumple){
         List <Clientes> listaClientes = null;
         try {
-            Query q = em.createQuery("select b from Clientes b where upper(b.nombre) like %upper(:nombre)% and "+
-                                     "upper(b.apellido) like %upper(:apellido)% and "+
-                                     "(to_char(to_date(b.fecNacimiento, 'dd/mm'),'dd/mm') = :cumple or :cumple is null)", BolsaPuntos.class)
+            Query q = em.createNativeQuery(" select b.*  "+
+                                     " from clientes b "+
+                                     " where (b.nombre ilike '%:nombre%' or :nombre is null) "+
+                                     " and (b.apellido ilike '%:apellido%' or :apellido is null) "+
+                                     " and  (to_char(to_date(b.fec_Nacimiento, 'dd/mm'),'dd/mm') = ':cumple' or :cumple is null) ", Clientes.class)
                                  .setParameter("nombre", nombre)
                                  .setParameter("apellido", apellido)
                                  .setParameter("cumple", cumple);
-                                 listaClientes = (List <Clientes>) q.getResultList();                
+                                 listaClientes = (List <Clientes>) q.getResultList();        
+            System.out.println(q.toString());
         } catch (Exception e) {
-            System.out.println("Error al realizar consulta de bolsa de puntos" + e);
+            System.out.println("Error al realizar consulta de cliente" + e);
             listaClientes = null;
         }
         return listaClientes;
