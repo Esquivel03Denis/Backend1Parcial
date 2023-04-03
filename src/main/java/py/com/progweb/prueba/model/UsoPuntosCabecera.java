@@ -35,7 +35,7 @@ public class UsoPuntosCabecera {
     @JoinColumn(name = "ID_CONCEPTOS_USO_PUNTOS", referencedColumnName = "ID")
     @ManyToOne
     private ConceptoUsoPuntos conceptoUso;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "usoPuntosCabecera")
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "usoPuntosCabecera")
     private List <UsoPuntosDetalles> detalles;
     
     public Integer getId() {

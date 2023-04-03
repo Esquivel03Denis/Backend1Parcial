@@ -11,6 +11,7 @@ import org.quartz.JobDetail;
 import org.quartz.ScheduleBuilder;
 import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
+import org.quartz.SchedulerFactory;
 import org.quartz.SimpleScheduleBuilder;
 import org.quartz.Trigger;
 import org.quartz.TriggerBuilder;
@@ -26,8 +27,8 @@ public class ActualizaBolsas {
         try{
 
             // start the Scheduler
-            Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
-            scheduler.start();
+            SchedulerFactory sf = new StdSchedulerFactory();
+            Scheduler scheduler = sf.getScheduler();
 
             // create the Job
             JobDetail job = JobBuilder.newJob(ActualizaBolsasDao.class).
@@ -47,6 +48,8 @@ public class ActualizaBolsas {
 
             // schedule the Job
             scheduler.scheduleJob(job, trigger);
+
+            scheduler.start();
 
             // run for 5 minutes and exit
             Thread.sleep(1000 * 300);

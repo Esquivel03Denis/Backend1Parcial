@@ -10,16 +10,16 @@ import javax.ejb.Startup;
 
 import org.quartz.SchedulerException;
 
-@Singleton
+/*@Singleton
 @LocalBean
-@Startup
+@Startup/* */
 public class TareaProgramada{
-    
+    /*
     @EJB
     private ActualizaBolsas actualizaBolsas;
 
-    @PostConstruct
+    @PostConstruct */
     public void initSingleton() throws ParseException, SchedulerException {
-        actualizaBolsas.initScheduler();
+        //actualizaBolsas.initScheduler();
     }
 }

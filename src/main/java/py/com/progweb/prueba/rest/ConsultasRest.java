@@ -29,7 +29,7 @@ public class ConsultasRest {
     @GET
     public Response getUsoPorConcepto(@QueryParam("idConcepto") Integer idConcepto, @QueryParam("fecha") String fecha,
                                                @QueryParam("idCliente") Integer idCliente){
-        List <UsoPuntosCabecera> listaPuntos = new ArrayList<UsoPuntosCabecera>();
+        List <UsoPuntosCabecera> listaPuntos;
         listaPuntos = consultaDao.obtenerPuntos(idConcepto, fecha, idCliente);
         if(listaPuntos != null){
             return Response.ok(listaPuntos).build();

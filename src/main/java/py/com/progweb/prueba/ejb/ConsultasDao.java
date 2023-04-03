@@ -1,5 +1,6 @@
 package py.com.progweb.prueba.ejb;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.Stateless;

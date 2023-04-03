@@ -23,7 +23,8 @@ public class ServiciosDao {
     @PersistenceContext(unitName = "pruebaPU")
     private EntityManager em;
     @Inject
-    BolsaPuntosDAO bolsaPuntosDAO;
+    private BolsaPuntosDAO bolsaPuntosDAO;
+
     SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
     public Boolean cargaPuntos (Integer idCliente, Integer montoOperacion, Integer idVencimiento, Integer idAsigPuntos){
         Boolean cargo = false;
@@ -109,6 +110,7 @@ public class ServiciosDao {
                         listaDetalles.add(usoPuntosDet);
                         bolsaPuntosDAO.actualizar(b);
                         uso = 2;
+                        enviaCorreo.mail(cli, b);
                         break;
                     }else{
                         puntosNecesarios = puntosNecesarios - b.getSaldoPuntos();
@@ -119,6 +121,7 @@ public class ServiciosDao {
                         usoPuntosDet.setPuntajeAsignado(puntosNecesarios);
                         usoPuntosDet.setUsoPuntosCabecera(usoPuntosCab);
                         listaDetalles.add(usoPuntosDet);
+                        enviaCorreo.mail(cli, b);
                         bolsaPuntosDAO.actualizar(b);
                     }   
                 }
