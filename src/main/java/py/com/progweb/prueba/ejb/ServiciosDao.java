@@ -9,7 +9,6 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
 
 import py.com.progweb.prueba.model.AsignacionPuntos;
 import py.com.progweb.prueba.model.BolsaPuntos;
